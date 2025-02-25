@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "arches-for-science"
 readme = "README.md"
 authors = [
-    {name = "Farallon Geographics, Inc", email = "dev@fargeo.com"}
+    {name = "Arches Project"}
 ]
 license = {text = "GNU AGPL3"}
 classifiers = [
@@ -33,7 +33,7 @@ dependencies = [
   "boto3==1.25.3",
   "arches-templating>=0.1.2",
 ]
-version = "2.0.2"
+version = "2.0.3"
 
 [project.optional-dependencies]
 dev = [
