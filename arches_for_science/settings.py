@@ -10,6 +10,11 @@ from datetime import datetime, timedelta
 from django.utils.translation import gettext_lazy as _
 
 try:
+    import tomllib
+except ImportError:
+    from pip._vendor import tomli as tomllib
+
+try:
     from arches.settings import *
 except ImportError:
     pass
@@ -193,17 +198,17 @@ LOGGING = {
     },
     "loggers": {
         "arches": {
-            "handlers": ["file", "console"],
+            "handlers": ["console"],
             "level": "WARNING",
             "propagate": True,
         },
         "arches_for_science": {
-            "handlers": ["file", "console"],
+            "handlers": ["console"],
             "level": "WARNING",
             "propagate": True,
         },
         "django.request": {
-            "handlers": ["file", "console"],
+            "handlers": ["console"],
             "level": "WARNING",
             "propagate": True,
         },
@@ -381,18 +386,18 @@ LANGUAGES = [
 # override this to permenantly display/hide the language switcher
 SHOW_LANGUAGE_SWITCH = len(LANGUAGES) > 1
 
-# try:
-#     from .package_settings import *
-# except ImportError:
-#     try:
-#         from package_settings import *
-#     except ImportError as e:
-#         pass
+try:
+    from .package_settings import *
+except ImportError:
+    try:
+        from package_settings import *
+    except ImportError as e:
+        pass
 
-# try:
-#     from .settings_local import *
-# except ImportError as e:
-#     try:
-#         from settings_local import *
-#     except ImportError as e:
-#         pass
+try:
+    from .settings_local import *
+except ImportError as e:
+    try:
+        from settings_local import *
+    except ImportError as e:
+        pass
