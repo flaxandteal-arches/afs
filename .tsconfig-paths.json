@@ -1,0 +1,16 @@
+{
+    "_comment": "This is a generated file. Do not edit directly.",
+    "compilerOptions": {
+        "paths": {
+            "@/arches/*": [
+                "./../ENV/lib/python3.12/site-packages/arches/app/src/arches/*"
+            ],
+            "@/arches_for_science/*": [
+                "./arches_for_science/src/arches_for_science/*"
+            ],
+            "*": [
+                "./node_modules/*"
+            ]
+        }
+    }
+}

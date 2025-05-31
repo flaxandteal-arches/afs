@@ -1,0 +1,15 @@
+{
+    "_comment": "This is a generated file. Do not edit directly.",
+    "APP_ROOT": "/web_root/arches_for_science/arches_for_science",
+    "ARCHES_APPLICATIONS": [
+        "arches_for_science"
+    ],
+    "ARCHES_APPLICATIONS_PATHS": {
+        "arches_for_science": "/web_root/arches_for_science/arches_for_science"
+    },
+    "SITE_PACKAGES_DIRECTORY": "/web_root/ENV/lib/python3.12/site-packages",
+    "PUBLIC_SERVER_ADDRESS": "http://arches:8000/",
+    "ROOT_DIR": "/web_root/ENV/lib/python3.12/site-packages/arches",
+    "STATIC_URL": "/static/",
+    "WEBPACK_DEVELOPMENT_SERVER_PORT": 9000
+}
