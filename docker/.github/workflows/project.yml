@@ -1,0 +1,35 @@
+name: Set up Arches project
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Set up Arches project
+        run: |
+          mkdir __ci
+          cd __ci
+          cp ../Makefile .
+          make create ARCHES_PROJECT=testproject
+          ls -ltr testproject
+      - name: Add snippet
+        run: |
+          cat .github/workflows/urls.py-snippet >> __ci/testproject/urls.py
+      - name: Check build
+        run: |
+          cd __ci/testproject
+          make build
+      - name: Check run
+        run: |
+          cd __ci/testproject
+          make run &
+          sleep 20
+          make down
