@@ -1,0 +1,22 @@
+{
+    "_comment": "This is a generated file. Do not edit directly.",
+    "compilerOptions": {
+        "paths": {
+            "@/arches/*": [
+                "./../arches/arches/app/src/arches/*"
+            ],
+            "@/afr/*": [
+                "./afr/src/afr/*"
+            ],
+            "@/arches_for_science/*": [
+                "./../ENV/lib/python3.12/site-packages/arches_for_science/src/arches_for_science/*"
+            ],
+            "@/arches_her/*": [
+                "./../ENV/lib/python3.12/site-packages/arches_her/src/arches_her/*"
+            ],
+            "*": [
+                "./node_modules/*"
+            ]
+        }
+    }
+}

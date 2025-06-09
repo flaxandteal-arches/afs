@@ -24,9 +24,12 @@ WEBPACK_LOADER = {
 }
 
 DATATYPE_LOCATIONS.append("afr.datatypes")
+DATATYPE_LOCATIONS.append('arches_her.datatypes')
 FUNCTION_LOCATIONS.append("afr.functions")
+FUNCTION_LOCATIONS.append('arches_her.functions')
 ETL_MODULE_LOCATIONS.append("afr.etl_modules")
 SEARCH_COMPONENT_LOCATIONS.append("afr.search_components")
+SEARCH_COMPONENT_LOCATIONS.append('arches_her.search.components')
 
 LOCALE_PATHS.insert(0, os.path.join(APP_ROOT, "locale"))
 
@@ -145,12 +148,14 @@ INSTALLED_APPS = (
     "afr",  # Ensure the project is listed before any other arches applications
     "arches_templating",
     "arches_for_science",
+    "arches_her",
     "pgtrigger",
 )
 
 # Placing this last ensures any templates provided by Arches Applications
 # take precedence over core arches templates in arches/app/templates.
 INSTALLED_APPS += ("arches.app",)
+ARCHES_APPLICATIONS = ("arches_her",)
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",

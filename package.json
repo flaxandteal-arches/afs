@@ -26,6 +26,7 @@
         "@uppy/progress-bar": "3.1.1",
         "arches": "git+https://github.com/archesproject/arches#dev/7.6.x",
         "arches_for_science": "git+https://github.com/archesproject/arches-for-science#dev/2.0.x",
+        "arches_her": "git+https://github.com/flaxandteal/arches-her.git#764_upgrade",
         "node-sass": "^7.0.3",
         "plotly": "^1.0.6",
         "typescript": "5.6.2",
