@@ -3,7 +3,7 @@ run-name: Build Arches project
 on: [push]
 env:
   ARCHES_BASE: ghcr.io/flaxandteal/arches-base:docker-7.6.8
-  ARCHES_PROJECT: arches_for_science
+  ARCHES_PROJECT: afr
 jobs:
   Build-Arches:
     runs-on: [self-hosted]
